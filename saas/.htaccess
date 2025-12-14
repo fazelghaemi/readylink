@@ -1,0 +1,29 @@
+# RDYS - Server Configuration (Fixed)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # جلوگیری از تداخل نام فایل‌ها و پوشه‌ها
+    Options -MultiViews
+
+    # 1. اجبار به استفاده از HTTPS (اختیاری - اگر SSL دارید فعال بماند)
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # 2. جلوگیری از دسترسی به فایل‌های مخفی
+    RewriteRule (^\.|/\.) - [F]
+
+    # 3. روتینگ اصلی (Main Routing)
+    # اگر درخواست یک فایل واقعی نیست...
+    RewriteCond %{REQUEST_FILENAME} !-f
+    # و یک پوشه واقعی نیست...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    # آن را به redirect.php بفرست
+    RewriteRule ^(.*)$ redirect.php?code=$1 [L,QSA]
+</IfModule>
+
+# تنظیمات کش و امنیت
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>

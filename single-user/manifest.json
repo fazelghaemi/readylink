@@ -1,0 +1,18 @@
+{
+  "name": "RDYS URL Shortener",
+  "short_name": "RDYS",
+  "start_url": "./index.php",
+  "display": "standalone",
+  "background_color": "#15202B",
+  "theme_color": "#15202B",
+  "description": "کوتاه کننده لینک حرفه‌ای و امن",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+[14-Dec-2025 08:03:59 UTC] PHP Parse error:  syntax error, unexpected identifier "in" in /home/mihansms/public_html/rdys/login.php on line 22
+[14-Dec-2025 08:04:05 UTC] PHP Parse error:  syntax error, unexpected identifier "in" in /home/mihansms/public_html/rdys/login.php on line 22
+[14-Dec-2025 11:39:56 Asia/Tehran] PHP Warning:  Undefined array key "is_active" in /home/mihansms/public_html/rdys/admin.php on line 283
+[14-Dec-2025 11:39:56 Asia/Tehran] PHP Warning:  Undefined array key "is_active" in /home/mihansms/public_html/rdys/admin.php on line 288
+[14-Dec-2025 11:39:56 Asia/Tehran] PHP Warning:  Undefined array key "is_active" in /home/mihansms/public_html/rdys/admin.php on line 289
+[14-Dec-2025 11:42:03 Asia/Tehran] PHP Warning:  Undefined array key "is_active" in /home/mihansms/public_html/rdys/admin.php on line 283
+[14-Dec-2025 11:42:03 Asia/Tehran] PHP Warning:  Undefined array key "is_active" in /home/mihansms/public_html/rdys/admin.php on line 288
+[14-Dec-2025 11:42:03 Asia/Tehran] PHP Warning:  Undefined array key "is_active" in /home/mihansms/public_html/rdys/admin.php on line 289
+[14-Dec-2025 11:43:25 Asia/Tehran] PHP Warning:  Undefined array key "is_active" in /home/mihansms/public_html/rdys/admin.php on line 283
+[14-Dec-2025 11:43:25 Asia/Tehran] PHP Warning:  Undefined array key "is_active" in /home/mihansms/public_html/rdys/admin.php on line 288
+[14-Dec-2025 11:43:25 Asia/Tehran] PHP Warning:  Undefined array key "is_active" in /home/mihansms/public_html/rdys/admin.php on line 289
+[14-Dec-2025 14:29:22 Asia/Tehran] Login Error: SQLSTATE[HY093]: Invalid parameter number
+[14-Dec-2025 14:29:25 Asia/Tehran] Login Error: SQLSTATE[HY093]: Invalid parameter number
+[14-Dec-2025 14:29:28 Asia/Tehran] Login Error: SQLSTATE[HY093]: Invalid parameter number
+[14-Dec-2025 14:29:42 Asia/Tehran] Login Error: SQLSTATE[HY093]: Invalid parameter number
+[14-Dec-2025 14:29:48 Asia/Tehran] Login Error: SQLSTATE[HY093]: Invalid parameter number
+[14-Dec-2025 14:33:17 Asia/Tehran] Login Error: SQLSTATE[HY093]: Invalid parameter number
+[14-Dec-2025 14:33:58 Asia/Tehran] Login Error: SQLSTATE[HY093]: Invalid parameter number
+[14-Dec-2025 14:37:08 Asia/Tehran] Login Error: SQLSTATE[HY093]: Invalid parameter number
+[14-Dec-2025 14:38:11 Asia/Tehran] Login Error: SQLSTATE[HY093]: Invalid parameter number
+[14-Dec-2025 14:39:10 Asia/Tehran] Login Error: SQLSTATE[HY093]: Invalid parameter number

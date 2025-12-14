@@ -1,0 +1,200 @@
+/* * RDYS - Master Stylesheet (Ready Studio Edition)
+ * Version: 4.0.0
+ * Brand Colors: #00B0A4 (Primary) | #010101 (Black)
+ */
+
+/* 1. تعریف متغیرهای اصلی (Color Palette) */
+:root {
+    /* رنگ‌های اصلی برند */
+    --bg-color: #010101;       /* مشکی مطلق ردی استودیو */
+    --card-color: #0D0D0D;     /* کمی روشن‌تر برای کارت‌ها */
+    --border-color: #1F1F1F;   /* رنگ حاشیه */
+    
+    --text-main: #FFFFFF;      /* متن سفید */
+    --text-sec: #9CA3AF;       /* متن خاکستری */
+    
+    --primary: #00B0A4;        /* رنگ سازمانی ردی استودیو */
+    --primary-hover: #008F85;  /* رنگ هاور دکمه‌ها */
+    --primary-glow: rgba(0, 176, 164, 0.25); /* درخشش نئونی */
+    
+    --success: #00B0A4;        /* استفاده از رنگ برند برای موفقیت */
+    --error: #FF3B30;          /* قرمز اخطار */
+    
+    --glass-bg: rgba(13, 13, 13, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.05);
+}
+
+/* 2. تعریف فونت‌ها */
+@font-face {
+    font-family: 'ReadyFont';
+    src: url('readyfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 3. تنظیمات پایه */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'ReadyFont', 'Vazirmatn', system-ui, -apple-system, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* حذف هایلایت پیش‌فرض موبایل */
+* {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* فوکوس روی المان‌ها با رنگ برند */
+*:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* 4. اسکرول بار سفارشی (Scrollbar) */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* 5. کامپوننت‌های رابط کاربری (UI Components) */
+
+/* پنل شیشه‌ای (Glassmorphism) */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* ورودی‌های فرم */
+input, select, textarea {
+    font-family: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px var(--primary-glow);
+}
+
+/* فیکس کردن رنگ پس‌زمینه اتوفیل کروم (مشکی) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--bg-color) inset !important;
+    -webkit-text-fill-color: var(--text-main) !important;
+    caret-color: var(--text-main);
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* دکمه‌های ناوبری فعال */
+.nav-item.active {
+    background-color: rgba(0, 176, 164, 0.08);
+    color: var(--primary);
+    border-right: 3px solid var(--primary);
+}
+
+.nav-item {
+    border-right: 3px solid transparent;
+}
+
+/* افکت متن توخالی (Outline Text) */
+.text-outline {
+    -webkit-text-stroke: 1px var(--border-color);
+    color: transparent;
+}
+
+/* 6. انیمیشن‌ها (Animations) */
+
+/* ظاهر شدن نرم */
+.animate-fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* شناور بودن */
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* افکت درخشش سایه */
+.shadow-glow {
+    box-shadow: 0 0 25px -5px var(--primary-glow);
+}
+
+/* لودینگ چرخشی */
+.loader-spin {
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+    border-top: 2px solid var(--primary);
+    width: 24px;
+    height: 24px;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* پس‌زمینه‌های تزئینی (Blobs) */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15; /* کاهش شفافیت برای مشکی عمیق */
+    pointer-events: none;
+    z-index: 0;
+}
+.blob-primary {
+    background-color: var(--primary);
+}
+.blob-sec {
+    background-color: #ffffff;
+}
+
+/* استایل‌های اختصاصی کارت */
+.rdys-card {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+.rdys-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 15px var(--primary-glow);
+}

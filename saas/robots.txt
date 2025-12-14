@@ -1,0 +1,7 @@
+User-agent: *
+مجاز بودن صفحه اصلی
+Allow: /
+مسدود کردن فایل‌های سیستمی و پنل مدیریت
+Disallow: /admin.php Disallow: /api.php Disallow: /install.php Disallow: /config.php Disallow: /functions.php Disallow: /export.php Disallow: /login.php Disallow: /redirect.php Disallow: /.htaccess
+مسدود کردن پارامترهای ردیابی (اختیاری)
+Disallow: /?

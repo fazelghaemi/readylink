@@ -1,0 +1,70 @@
+{
+  "name": "RDYS | کوتاه‌کننده لینک ردی استودیو",
+  "short_name": "RDYS",
+  "start_url": "./index.php?source=pwa",
+  "id": "/index.php",
+  "display": "standalone",
+  "background_color": "#010101",
+  "theme_color": "#00B0A4",
+  "description": "پلتفرم مدیریت لینک حرفه‌ای با قابلیت‌های پیشرفته SaaS و آمار دقیق.",
+  "orientation": "portrait-primary",
+  "categories": [
+    "productivity",
+    "utilities",
+    "business"
+  ],
+  "icons": [
+    {
+      "src": "favicon-black.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon-black.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "ساخت لینک جدید",
+      "short_name": "لینک جدید",
+      "description": "کوتاه کردن سریع یک آدرس",
+      "url": "/index.php?action=create",
+      "icons": [{ "src": "favicon-black.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "داشبورد مدیریت",
+      "short_name": "داشبورد",
+      "description": "مشاهده آمار و لینک‌ها",
+      "url": "/admin.php",
+      "icons": [{ "src": "favicon-black.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "favicon-black.png", 
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "صفحه اصلی دسکتاپ"
+    },
+    {
+      "src": "favicon-black.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "نمای موبایل"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+  "display_override": [
+    "window-controls-overlay",
+    "minimal-ui",
+    "standalone"
+  ]
+}
